@@ -11,5 +11,9 @@ app.config(function($routeProvider) {
             templateUrl: "app/dashboard/dashboard.html",
             controller : "dashboardController"
         })
+        .when("/addNewOrder", {
+            templateUrl: "app/addNewOrder/addNewOrder.html",
+            controller : "addNewOrderController"
+        })
         .otherwise({ redirectTo: '/login' });
 });

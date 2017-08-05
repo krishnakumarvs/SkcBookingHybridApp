@@ -1,4 +1,8 @@
+app.controller("dashboardController", function($scope, $location) {
+	$scope.gotoBookingsPage = gotoBookingsPage;
 
-app.controller("dashboardController", function ($scope) {
-    $scope.msg = "I love me";
+	function gotoBookingsPage() {
+		$location.path("/addNewOrder");
+	}
+
 });

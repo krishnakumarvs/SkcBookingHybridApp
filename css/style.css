@@ -1,5 +1,5 @@
-body {
-	color : purple;
+.align-center {
+	text-align: center !important;
 }
 
 .login-panel {
@@ -22,4 +22,24 @@ body {
 
 .login-button {
 	margin-top: 10px !important;
+}
+
+
+
+
+/* Dashboard page */
+
+.dashboard-page-title-row {
+	margin-top: 10px;
+}
+
+.add-icon {
+	width: 50px;
+}
+
+.dashboard-title {
+	font-size: 30px;
+	font-family: fantasy;
+	font-weight: bold;
+	color: #863e1a;
 }

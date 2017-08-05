@@ -6,12 +6,14 @@
 	  </div>
 	  <div class="panel-body">
 	    <span class="login-fields">Name</span> 
-	    <input class="login-inputs" type="text"> 
+	    <input class="login-inputs" type="text " ng-model = "name"> 
 	    <span class="login-fields">Password</span> 
-	    <input class="login-inputs" type="text">
-	    <button type="button" class="btn btn-default login-button">Login</button>
+	    <input class="login-inputs" type="text" ng-model = "password" >
+	    <button ng-click= "validation()" type="button" class="btn btn-default login-button">Login</button>
 
 	  </div>
 
 	</div>
 </div>
+
+

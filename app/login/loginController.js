@@ -1,28 +1,22 @@
+app.controller("loginController", function($scope, $location) {
 
-app.controller("loginController", function ($scope , $location) {
-    console.log("Login page is opened.... ")
-    $scope.name = "admin";
-	$scope.password = "admin";
-    $scope.validation = validation;
-	function validation() {
-		var name = $scope.name;
-    	var password = $scope.password;
+	$scope.userDetails = {};
+	$scope.userDetails.name = "admin";
+	$scope.userDetails.password = "admin";
 
-    if (name == "admin"&& password == "admin") 
-	{
-		console.log("ok");
-		$location.path("/dashboard");
-    }else 
-	if(name=="")
-	{
-    alert("Enter name");
-    return false;  
-	}else
-	if(password =="")
-	{
-    alert("Enter Password");
-    return false;
-  	}
+	$scope.authenticateUser = authenticateUser;
+
+	function authenticateUser() {
+		if ($scope.userDetails.name == "") {
+			alert("Enter name");
+		} else if ($scope.userDetails.password == "") {
+			alert("Enter Password");
+		} else if ($scope.userDetails.name == "admin" && $scope.userDetails.password == "admin") {
+			$location.path("/dashboard");
+		} else {
+			alert("User name or password incorrect");
+			$scope.userDetails.name = "";
+			$scope.userDetails.password = "";
+		}
 	}
-
 });

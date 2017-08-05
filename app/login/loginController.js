@@ -1,4 +1,4 @@
 
 app.controller("loginController", function ($scope) {
-    $scope.msg = "I love me";
+    console.log("Login page is opened.... ")
 });
